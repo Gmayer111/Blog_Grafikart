@@ -2,18 +2,18 @@
 
 require '../vendor/autoload.php';
 
-$router = new AltoRouter();
+// Constante permettant d'obtenir le temps de chargement d'une page
+// Donne le temps actuelle avec les ms
+define('DEBUG_TIME', microtime(true));
 
-define('VIEW_PATH', dirname(__DIR__) . '/views');
+$whoops = new \Whoops\Run;
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops->register();
 
-$router->map('GET', '/blog', function () {
-    require VIEW_PATH . '/post/index.php';
-});
+$router = new App\Router(dirname(__DIR__) . '/views');
+$router
+    ->get('/blog', 'post/index', 'blog')
+    ->get('/blog/category', 'category/show', 'category')
+    ->run();
 
-$router->map('GET', '/blog/category', function () {
-    require VIEW_PATH . '/category/show.php';
-});
 
-// Url correspond bien au router
-$match = $router->match();
-$match['target']();

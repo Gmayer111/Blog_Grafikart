@@ -6,6 +6,11 @@
 
 - Router avec Altorouter 
 
+Debug :
+
+- Var-dumper de symfony
+- whoops pour une interface plus lisible
+
 
 ### Router
 
