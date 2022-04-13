@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '0d15176ab19823cc4d9f90a16964c59220eba29f',
+    'reference' => 'd710762302e68ab5aa30d22ecf8fe7d3b39f7541',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '0d15176ab19823cc4d9f90a16964c59220eba29f',
+      'reference' => 'd710762302e68ab5aa30d22ecf8fe7d3b39f7541',
     ),
     'altorouter/altorouter' => 
     array (
@@ -37,6 +37,15 @@
       array (
       ),
       'reference' => 'bc0fd11bc455cc20ee4b5edabc63ebbf859324c7',
+    ),
+    'fzaninotto/faker' => 
+    array (
+      'pretty_version' => 'v1.8.0',
+      'version' => '1.8.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f72816b43e74063c8b10357394b6bba8cb1c10de',
     ),
     'psr/log' => 
     array (

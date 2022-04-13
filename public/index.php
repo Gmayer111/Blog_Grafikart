@@ -12,7 +12,11 @@ $whoops->register();
 
 $router = new App\Router(dirname(__DIR__) . '/views');
 $router
-    ->get('/blog', 'post/index', 'blog')
+    ->get('/', 'post/index', 'home')
+    // [*:SLUG] => param qui sera le slug , [i:id] => param id (i pour int)
+    // Ira le fichier post/show.php
+    // post => nom pour url
+    ->get('/blog/[*:slug]-[i:id]', 'post/show', 'post')
     ->get('/blog/category', 'category/show', 'category')
     ->run();
 
